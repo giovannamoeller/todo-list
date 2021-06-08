@@ -1,4 +1,7 @@
-(() => {
+import ButtonDone from './components/ButtonDone.js';
+import ButtonDelete from './components/ButtonDelete.js';
+
+
     const button = document.querySelector('[data-button]');
     const input = document.querySelector('[data-input]');
     const list = document.querySelector('ul');
@@ -17,37 +20,14 @@
             
             itemList.innerHTML = content;
             itemList.insertBefore(ButtonDone(), itemList.childNodes[0]);
+            itemList.appendChild(ButtonDelete());
             list.appendChild(itemList); // add a child element inside the parent element
     
             input.value = "";
         }
         
     }
-    
-    const ButtonDone = () => {
-        const img = document.createElement('img');
-        img.src = 'assets/not-filled.svg';
-    
-        img.addEventListener('click', taskDone);
-    
-        return img;
-    }
 
-    const ButtonDelete = () => {
-        const 
-    }
-    
-    
-    function taskDone(evento) {
-        const span = evento.target.parentElement.querySelector('span');
-        const img = evento.target;
-    
-        span.classList.toggle('task-done');
-    
-        img.src.includes('not-filled') ? img.src = 'assets/filled.svg'
-        : img.src = 'assets/not-filled.svg';
-    }
-})()
 
 
 

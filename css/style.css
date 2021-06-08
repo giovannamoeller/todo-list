@@ -106,6 +106,7 @@ ul li {
   margin: 22px 0;
   color: #8E8E8E;
   font-weight: 300;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,6 +125,11 @@ ul li img {
 
 ul li .task-done {
   text-decoration: line-through;
+}
+
+ul li .remove {
+  position: absolute;
+  right: 0;
 }
 
 footer {

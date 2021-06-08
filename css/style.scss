@@ -84,6 +84,7 @@ ul li {
     margin: 22px 0;
     color: $base-color;
     font-weight: 300;
+    position: relative;
     @include flex(center, flex-start);
 
     img {
@@ -93,6 +94,11 @@ ul li {
 
     .task-done {
         text-decoration: line-through;
+    }
+
+    .remove {
+        position: absolute;
+        right: 0;
     }
 }
 
