@@ -7,7 +7,7 @@
     font-family: "Circular Std", sans-serif;
 }
 
-@mixin center($align, $justify) {
+@mixin flex($align, $justify) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
@@ -18,42 +18,40 @@ body {
     height: 100vh;
     background: $bg-color;
 
-    @include center(center, center);
+    @include flex(center, center);
 }
 
 section.welcome {
     width: 50%;
     height: 100%;
 
-    @include center(flex-start, center);
+    @include flex(flex-start, center);
     flex-direction: column;
     padding-left: 88px;
-}
 
-section.welcome h3 {
-    font-weight: 400;
-    color: $bg-white;
-    margin-bottom: 32px;
-}
+    h3 {
+        font-weight: 400;
+        color: $bg-white;
+        margin-bottom: 32px;
+    }
 
-section.welcome h2 {
-    font-weight: 500;
-    font-size: 2.5rem;
-    line-height: 110%;
-    color: $main-color-dark;
-    margin-bottom: 8px;
-}
+    h2 {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 110%;
+        color: $main-color-dark;
+        margin-bottom: 8px;
+    }
 
-section.welcome span {
-    color: $text-color-blue;
-
+    span {
+        color: $text-color-blue;
+    }
 }
 
 section.todo-list {
     width: 50%;
     height: 100%;
-
-    @include center(center,center);
+    @include flex(center,center);
 }
 
 .container {
@@ -62,38 +60,44 @@ section.todo-list {
 
     border-radius: 32px;
 
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 64px;
     background: $bg-white;
 
     position: relative;
-}
 
-.container h3 {
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: $main-color;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #F0F0F0;
-    text-align: center;
-    margin-bottom: 64px;
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $main-color;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #F0F0F0;
+        text-align: center;
+        margin-bottom: 64px;
+    }
 }
-
 
 ul li {
     list-style: none;
     margin: 22px 0;
     color: $base-color;
     font-weight: 300;
-    @include center(center, flex-start);
+    @include flex(center, flex-start);
+
+    img {
+        margin-right: 16px;
+        cursor: pointer;
+    }
 }
 
-ul li img {
-    margin-right: 16px;
-    cursor: pointer;
+footer {
+    @include flex(flex-end, space-between);
+    width: 100%;
 }
 
-button {
+footer button {
     border: none;
     cursor: pointer;
     border-radius: 14px;
@@ -102,20 +106,30 @@ button {
     color: $bg-white;
     background: $main-color;
 
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 24px;
-
-    @include center(center,center);
+    @include flex(center,center);
     transition: all .4s;
     box-shadow: -1.57219px 30.9601px 80px rgba(99, 91, 240, 0.31), -1.01901px 20.0667px 46.8519px rgba(99, 91, 240, 0.23537), -0.605585px 11.9254px 25.4815px rgba(99, 91, 240, 0.188296), -0.314439px 6.19202px 13px rgba(99, 91, 240, 0.155), -0.128105px 2.52268px 6.51852px rgba(99, 91, 240, 0.121704), -0.0291147px 0.573335px 3.14815px rgba(99, 91, 240, 0.0746296);
+
+    img {
+        width: 35%;
+    }
+
+    &:hover {
+        background: $main-color-darker;
+    }
 }
 
-button:hover {
-    background: $main-color-darker;
+footer input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $main-color;
+    width: 70%;
+
+    padding: 8px 16px;
+    color: $base-color;
+
+    &::placeholder {
+        color: #c0c0c0;
+    }
 }
 
-button img {
-    width: 35%;
-}

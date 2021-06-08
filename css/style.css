@@ -76,10 +76,16 @@ section.todo-list {
   height: 95%;
   width: 95%;
   border-radius: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 64px;
   background: #fff;
   position: relative;
@@ -116,7 +122,20 @@ ul li img {
   cursor: pointer;
 }
 
-button {
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+footer button {
   border: none;
   cursor: pointer;
   border-radius: 14px;
@@ -124,10 +143,6 @@ button {
   min-height: 48px;
   color: #fff;
   background: #635BF0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,11 +158,36 @@ button {
           box-shadow: -1.57219px 30.9601px 80px rgba(99, 91, 240, 0.31), -1.01901px 20.0667px 46.8519px rgba(99, 91, 240, 0.23537), -0.60559px 11.9254px 25.4815px rgba(99, 91, 240, 0.188296), -0.31444px 6.19202px 13px rgba(99, 91, 240, 0.155), -0.1281px 2.52268px 6.51852px rgba(99, 91, 240, 0.121704), -0.02911px 0.57334px 3.14815px rgba(99, 91, 240, 0.0746296);
 }
 
-button:hover {
+footer button img {
+  width: 35%;
+}
+
+footer button:hover {
   background: #4f48d5;
 }
 
-button img {
-  width: 35%;
+footer input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #635BF0;
+  width: 70%;
+  padding: 8px 16px;
+  color: #8E8E8E;
+}
+
+footer input::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+
+footer input:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+footer input::-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+footer input::placeholder {
+  color: #c0c0c0;
 }
 /*# sourceMappingURL=style.css.map */
