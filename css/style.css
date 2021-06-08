@@ -122,6 +122,10 @@ ul li img {
   cursor: pointer;
 }
 
+ul li .task-done {
+  text-decoration: line-through;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
