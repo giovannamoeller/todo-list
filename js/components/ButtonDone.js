@@ -1,20 +1,24 @@
-const ButtonDone = () => {
+import { LoadTask } from './Task.js';
+
+const ButtonDone = (id) => {
     const img = document.createElement('img');
     img.src = 'assets/not-filled.svg';
 
-    img.addEventListener('click', taskDone);
+    img.addEventListener('click', function() {
+        taskDone(id);
+    });
 
     return img;
 }
 
-function taskDone(event) {
-    const span = event.target.parentElement.querySelector('span');
-    const img = event.target;
+function taskDone(id) {
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-    span.classList.toggle('task-done');
+    tasks[id].done = !tasks[id].done;
 
-    img.src.includes('not-filled') ? img.src = 'assets/filled.svg'
-    : img.src = 'assets/not-filled.svg';
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    LoadTask();
 }
 
 export default ButtonDone;

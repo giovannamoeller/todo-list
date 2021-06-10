@@ -89,6 +89,7 @@ section.todo-list {
   padding: 64px;
   background: #fff;
   position: relative;
+  overflow-y: auto;
 }
 
 .container h3 {
@@ -98,7 +99,7 @@ section.todo-list {
   padding-bottom: 8px;
   border-bottom: 2px solid #F0F0F0;
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 ul li {
@@ -143,6 +144,7 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  margin: 16px 0;
 }
 
 footer button {
