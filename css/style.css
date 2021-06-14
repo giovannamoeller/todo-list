@@ -124,6 +124,10 @@ ul li img {
   cursor: pointer;
 }
 
+ul li img.icon-done {
+  width: 18px;
+}
+
 ul li .task-done {
   text-decoration: line-through;
 }
@@ -201,5 +205,35 @@ footer input::-ms-input-placeholder {
 
 footer input::placeholder {
   color: #c0c0c0;
+}
+
+@media screen and (max-width: 1160px) {
+  .container {
+    padding: 32px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  section.todo-list {
+    width: 60%;
+  }
+  section.welcome {
+    padding-left: 42px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  section.welcome {
+    display: none;
+  }
+  section.todo-list {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  section.todo-list {
+    width: 95%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

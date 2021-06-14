@@ -20,6 +20,7 @@ export const CreateTask = ({ value, done }, id) => {
     itemList.innerHTML = `<span>${value}</span>`;
 
     const img = ButtonDone(id);
+    img.classList = 'icon-done';
     itemList.insertBefore(img, itemList.childNodes[0]);
     itemList.appendChild(ButtonDelete(id));
     const span = img.parentElement.querySelector('span');
