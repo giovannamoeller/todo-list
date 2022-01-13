@@ -2,6 +2,7 @@ const getDate = () => {
     const date = new Date();
     let weekDay, month;
     const day = date.getDate();
+    const year = date.getFullYear();
 
     switch(date.getDay()) {
         case 1: weekDay = 'Monday'; break;
@@ -28,7 +29,7 @@ const getDate = () => {
         case 12: month = 'dec'; break;
     }
 
-    const fullDate = `${weekDay}, ${day} ${month}.`;
+    const fullDate = `${weekDay}, ${day} ${month} ${year}.`;
 
     return fullDate;
 

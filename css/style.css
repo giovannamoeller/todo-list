@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Circular std", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 body {
@@ -47,7 +47,7 @@ section.welcome h3 {
 }
 
 section.welcome h2 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 2.5rem;
   line-height: 110%;
   color: #7F6BF5;
